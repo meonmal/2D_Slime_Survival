@@ -12,3 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e8ae30128a5ae64cab8004dbf3616c7, type: 3}
   m_Name: PlayerStatSO
   m_EditorClassIdentifier: 
+  moveSpeed:
+  - 3
+  - 3.5
+  - 4
+  - 4.5
+  - 5
+  playerDamage:
+  - 1
+  - 1.5
+  - 2
+  - 2.5
+  - 3
+  expMagnetRadius:
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
