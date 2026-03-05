@@ -1,0 +1,4 @@
+repository "2D_Slime_Survival/2D_Slime_Survival@14569440717632@cloud"
+  path "/"
+    br "/main"
+    co "/main"
