@@ -179,6 +179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5034c31a4eb0f094db0608ea84f3e7c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: 50
+  maxDistance: 30
   minReSpawnDistance: 15
   maxReSpawnDistance: 20

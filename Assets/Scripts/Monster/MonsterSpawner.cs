@@ -36,6 +36,10 @@ public class MonsterSpawner : MonoBehaviour
     private MonsterStatRuntime statRuntime;
 
     private int aliveMonsterCount;
+    private float currentHp = 1f;
+    private float currentDamage = 1f;
+    private float currentMoveSpeed = 1f;
+    private float currentXP = 1f;
 
     private void Awake()
     {
@@ -66,12 +70,7 @@ public class MonsterSpawner : MonoBehaviour
                 {
                     Monster monster = pool.Get();
 
-                    float hpMul = 1.1f;
-                    float dmgMul = 1.05f;
-                    float spdMul = 1.01f;
-                    float xpMul = 1.05f;
-
-                    statRuntime = new MonsterStatRuntime(so, hpMul, dmgMul, spdMul, xpMul);
+                    statRuntime = new MonsterStatRuntime(so, currentHp, currentDamage, currentMoveSpeed, currentXP);
 
                     monster.transform.position = SpawnMonsterPosition();
                     monster.SetTarget(target);
@@ -90,6 +89,11 @@ public class MonsterSpawner : MonoBehaviour
             yield return new WaitForSeconds(increaseInterval);
             spawnCount += increaseAmount;
             maxAliveMonsterCount += increaseAmount;
+
+            currentHp *= 1.1f;
+            currentDamage *= 1.05f;
+            currentMoveSpeed *= 1.01f;
+            currentXP *= 1.05f;
         }
     }
 
